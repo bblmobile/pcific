@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BasariResource\Pages;
 use App\Filament\Resources\BasariResource\RelationManagers;
 use App\Models\Basari;
+use App\Models\Takim;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -36,6 +37,18 @@ class BasariResource extends Resource {
 					])
 					->required()
 					->searchable(), // Arama yapılabilir olması için
+
+				Forms\Components\Select::make('takim_id')
+					->label('Takım')
+					->options(fn() => Takim::query()->pluck('name', 'id'))
+					->searchable()
+					->relationship('takim', 'name')
+					->createOptionForm([
+						Forms\Components\TextInput::make('name')
+							->required()
+							->maxLength(255)
+					])
+					->preload(),
 
 				Forms\Components\TextInput::make('turnuva')
 					->required()

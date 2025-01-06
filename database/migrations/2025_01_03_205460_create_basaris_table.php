@@ -12,6 +12,7 @@ return new class extends Migration {
 		Schema::create('basaris', function (Blueprint $table) {
 			$table->id();
 			$table->string('oyun');
+			$table->foreignId('takim_id')->nullable()->constrained('takims')->nullOnDelete();
 			$table->string('turnuva');
 			$table->string('derece');
 			$table->date('tarih');
