@@ -64,7 +64,7 @@
                             <div class="tab-pane fade {{ $index === 0 ? 'show active' : '' }}"
                                 id="v-pills-{{ Str::slug($takim->name) }}" role="tabpanel">
                                 <div class="custom-container">
-                                    <h3 class="mb-4">{{ $takim->name }} Turnuvaları</h3>
+                                    <h3 class="mb-4">{{ $takim->name }}</h3>
                                     <table class="table-hover table">
                                         <thead>
                                             <tr>
