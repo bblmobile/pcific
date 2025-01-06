@@ -25,7 +25,7 @@ Route::get('biz-kimiz', function () {
 })->name('biz-kimiz');
 Route::get('ekibimiz', function () {
 	return view('ekibimiz');
-})->name('biz-kimiz');
+})->name('ekibimiz');
 Route::get('basarilarimiz', [BasariController::class, 'index'])->name('basari');
 
 require __DIR__ . '/auth.php';
