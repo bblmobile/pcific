@@ -23,6 +23,7 @@
         integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
+    @yield('custom-css')
 </head>
 
 
@@ -64,6 +65,8 @@
     <script src="{{ asset('js/gsap-text-animation.js') }}"></script>
     <script src="{{ asset('js/imageRevealHover.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
+    @yield('custom-js')
 </body>
 
 </html>

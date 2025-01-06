@@ -18,5 +18,10 @@ class DatabaseSeeder extends Seeder {
 			'email' => 'admin@pcific.com',
 			'password' => '$2y$12$Dbe5.2Pu12DSCx4aElYE2uJEf8bIfvYeFDbQoXkogkoT24qpbQc.S',
 		]);
+
+		$this->call([
+			TakimSeeder::class,
+			BasariSeeder::class,
+		]);
 	}
 }

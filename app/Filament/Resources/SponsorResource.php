@@ -27,6 +27,9 @@ class SponsorResource extends Resource {
 					->required()
 					->label('Sponsor Adı')
 					->maxLength(255),
+				Forms\Components\TextInput::make('url')
+					->label('Sponsor URL')
+					->maxLength(255),
 
 				Forms\Components\FileUpload::make('image')
 					->label('Sponsor Görseli')
@@ -47,6 +50,10 @@ class SponsorResource extends Resource {
 			->columns([
 				Tables\Columns\TextColumn::make('name')
 					->label('Sponsor Adı')
+					->searchable()
+					->sortable(),
+				Tables\Columns\TextColumn::make('url')
+					->label('Sponsor URL')
 					->searchable()
 					->sortable(),
 

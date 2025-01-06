@@ -24,11 +24,11 @@
                         <a class="fw-semibold nav-link" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false"> Hakkımızda </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/biz-kimiz">Biz Kimiz</a></li>
-                            <li><a class="dropdown-item" href="/ekibimiz">Ekibimiz</a></li>
-                            <li><a class="dropdown-item" href="/basarilarimiz">Başarılarımız</a></li>
+                            <li><a class="dropdown-item" href="{{ route('biz-kimiz') }}">Biz Kimiz</a></li>
+                            <li><a class="dropdown-item" href="{{ route('ekibimiz') }}">Ekibimiz</a></li>
+                            <li><a class="dropdown-item" href="{{ route('basarilarimiz') }}">Başarılarımız</a></li>
 
-                            <li><a class="dropdown-item" href="/sponsorlarimiz">Sponsorlarımız</a></li>
+                            <li><a class="dropdown-item" href="{{ route('sponsorlar') }}">Sponsorlarımız</a></li>
                         </ul>
                     </li>
                     <li class="dropdown menu-item-has-children nav-item">
@@ -36,19 +36,16 @@
                             aria-expanded="false"> Takımlarımız </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/takim/valorant">Valorant</a></li>
-                            <li><a class="dropdown-item" href="game-details.html">Counter Strike 2</a></li>
-                            <li><a class="dropdown-item" href="game-details.html">FIFA</a></li>
+                            {{-- <li><a class="dropdown-item" href="game-details.html">Counter Strike 2</a></li>
+                            <li><a class="dropdown-item" href="game-details.html">FIFA</a></li> --}}
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="fw-semibold nav-link" href="/kariyer"> Oyuncu Başvurusu </a>
+                        <a class="fw-semibold nav-link" href="{{ route('oyuncu-basvuru') }}"> Oyuncu Başvurusu </a>
                     </li>
                     <li class="nav-item">
-                        <a class="fw-semibold nav-link" href="/blog"> Blog </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="fw-semibold nav-link" href="/iletisim"> İletişim </a>
+                        <a class="fw-semibold nav-link" href="{{ route('iletisim') }}"> İletişim </a>
                     </li>
                 </ul>
             </div>
