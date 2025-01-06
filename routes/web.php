@@ -23,7 +23,10 @@ use Illuminate\Support\Facades\Route;
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+	return view('acilis');
+})->name('acilis');
+Route::get('/anasayfa', [HomeController::class, 'index'])->name('home');
 Route::get('biz-kimiz', function () {
 	return view('biz-kimiz');
 })->name('biz-kimiz');
